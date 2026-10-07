@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo de Plantas — Odette ygg</title>
+
+
+
+
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="hero-brand"><span class="hero-brand-mark">OY</span> Plantas_Odette_Ygg</div>
+      <p class="hero-eyebrow">Plantas · arreglos · detalles</p>
+      <h1>Detalles<br>que hacen hogar.</h1>
+      <p class="tag">Plantas, arreglos y amigurumis hechos a mano</p>
+      <p class="desc">Plantas, composiciones y detalles para llenar tus espacios de vida.</p>
+      <div class="hero-actions">
+        <a class="btn btn-hero" href="#categorias">Explorar categorías <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-hero-outline" id="heroWa" href="#" target="_blank">Pedir por WhatsApp</a>
+      </div>
+      <div class="hero-notes" aria-label="Beneficios del catálogo">
+        <span><strong>01</strong> Selección especial</span>
+        <span><strong>02</strong> Pedidos personalizados</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-photo-frame">
+        <img src="img/productos/75cb49b7-7901-41df-ad5d-20a40c879d81.jpg" alt="Yucas ornamentales en maceta" fetchpriority="high">
+        <span class="hero-photo-label">Yucas ornamentales <b>2026</b></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="quick-nav" aria-label="Accesos rápidos">
+  <a href="#productos" onclick="event.preventDefault(); jumpToCategory('sustrato')">🪴 Ver Sustratos</a>
+  <a href="#productos" onclick="event.preventDefault(); jumpToCategory('frutales')">🍑 Árboles frutales</a>
+  <a href="#arreglos-suculentas">🌵 Arreglos de suculentas</a>
+  <a class="alt" href="#amigurumis">🧶 Ver Amigurumis</a>
+</nav>
+
+<main>
+<section class="category-section" id="categorias" aria-labelledby="categoryTitle">
+  <div class="section-heading">
+    <span class="section-kicker">Encuentra tu próxima planta</span>
+    <h2 id="categoryTitle">Explora por categoría</h2>
+    <p>Elige un ambiente o tipo de planta para ver opciones disponibles.</p>
+  </div>
+  <div class="chips category-bubbles" id="categoryChips" aria-label="Categorías rápidas"></div>
+</section>
+<section class="controls" id="productos" aria-label="Buscar y filtrar productos">
+  <div class="search-wrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    <input id="search" type="search" aria-label="Buscar productos" placeholder="Buscar una planta (ej: monstera, suculenta, ficus...)">
+  </div>
+  <div class="chips" id="chips"></div>
+  <div class="count-label" id="countLabel"></div>
+  <button class="catalog-toggle" id="catalogToggle" type="button">Ver todo el catálogo</button>
+</section>
+
+<section class="catalog-section" aria-labelledby="featuredTitle">
+  <div class="catalog-heading">
+    <div>
+      <span class="section-kicker">Para empezar</span>
+      <h2 id="featuredTitle">Selección destacada</h2>
+    </div>
+    <p>Descubre algunas opciones y abre “Ver todo el catálogo” para consultar la colección completa.</p>
+  </div>
+  <div class="grid container-fluid" id="grid" aria-live="polite" aria-label="Catálogo de productos"></div>
+</section>
+
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="modalName" aria-hidden="true">
+  <div class="modal">
+    <button class="modal-close" type="button" aria-label="Cerrar producto" onclick="closeModal()">✕</button>
+    <div class="modal-product-image">
+      <img id="modalImg" src="" alt="Producto seleccionado">
+    </div>
+    <div class="modal-body">
+      <span class="cat-tag" id="modalCat"></span>
+      <h2 id="modalName"></h2>
+      <div class="size-row" id="modalSizes" style="display:none;"></div>
+      <span class="price-big" id="modalPrice"></span>
+      <div class="modal-water" id="modalWater" style="display:none;"></div>
+      <h3 class="care-title">Descripción y cuidados</h3>
+      <div class="care" id="modalCare"></div>
+      <div class="modal-actions">
+          <button class="btn-add" onclick="addModalToCart()">➕ Añadir al carrito</button>
+        <a class="btn btn-whatsapp" id="modalWa" href="#" target="_blank">💬 Pedir por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="floating-wa" id="floatWa" href="#" target="_blank" title="Escríbenos por WhatsApp" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path fill="#fff" d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.373 0 .04 5.333.04 12c0 2.11.55 4.17 1.59 6.01L0 24l6.27-1.61A11.93 11.93 0 0 0 12 24c6.627 0 11.96-5.333 11.96-12 0-1.98-.48-3.86-1.44-5.52zM12 21.6c-1.1 0-2.18-.26-3.14-.76l-.22-.11-3.73.96.98-3.64-.12-.23A9.6 9.6 0 0 1 2.4 12C2.4 6.48 6.48 2.4 12 2.4S21.6 6.48 21.6 12 17.52 21.6 12 21.6z"/>
+    <path fill="#fff" d="M17.02 14.06c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.62.14s-.71.88-.87 1.06c-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.6-1.5-1.87-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18 0-.34-.05-.48-.05-.14-.62-1.5-.85-2.06-.22-.54-.45-.46-.62-.47l-.53-.01c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.12 2.81c.14.18 1.94 3.02 4.7 4.24 1.31.56 1.85.6 2.51.5.39-.06 1.6-.65 1.82-1.28.22-.63.22-1.17.15-1.28-.07-.11-.25-.18-.52-.32z"/>
+  </svg>
+</a>
+
+<button class="floating-cart" id="floatCart" type="button" title="Ver carrito" aria-label="Carrito" onclick="toggleCart();">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path fill="#fff" d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.16 14l.84-2h7.45c.75 0 1.41-.41 1.74-1.03l2.58-5.17-1.82-.9L16.9 10H9.13L8.27 7H4v2h2.27l1.89 4.5c.17.4.53.7.97.8v.2H7.16z"/>
+  </svg>
+  <span class="cart-badge" id="cartCount" style="display:none">0</span>
+</button>
+
+<aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Carrito de compras">
+  <div class="cart-header">
+    <strong>Tu pedido</strong>
+    <button type="button" aria-label="Cerrar carrito" onclick="toggleCart()" style="background:none;border:none;font-size:18px;cursor:pointer">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <button class="btn-clear" type="button" onclick="clearCart()">Vaciar</button>
+    <a class="btn-send" href="#" id="sendCartBtn" onclick="event.preventDefault(); sendCartViaWhatsApp()">Enviar por WhatsApp</a>
+  </div>
+</aside>
+
+<section class="amigurumis-section" id="amigurumis">
+  <span class="section-label">🧶 Creaciones artesanales</span>
+  <h2>Amigurumis hechos a mano</h2>
+  <p class="subtitle">Creaciones hechas con cariño para regalar, decorar y hacer especial cada momento.</p>
+  <div class="social-section">
+    <div class="section-header">
+      <h2>Trabajos realizados</h2>
+      <p>Galería de fotografías reales</p>
+    </div>
+    <div class="amigurumi-grid" id="amigurumiGrid"></div>
+  </div>
+  <div class="amigurumi-cta">
+    <h3>Amigurumis a pedido</h3>
+    <p>¿Tienes una idea en mente? También realizamos amigurumis personalizados. Cuéntanos qué tienes en mente y conversemos sobre tu diseño.</p>
+    <a class="btn btn-whatsapp" id="amigurumiWa" href="#" target="_blank">💬 Cotizar un amigurumi</a>
+  </div>
+</section>
+
+<section class="custom-succulents-section" id="arreglos-suculentas">
+  <div class="custom-succulents-inner">
+    <span class="section-label">🌵 Creaciones a pedido</span>
+    <h2>Arreglos de suculentas a pedido</h2>
+    <p class="subtitle">Creamos composiciones únicas con color, textura y personalidad. Mira algunas ideas y escríbenos para diseñar la tuya.</p>
+    <div class="custom-succulent-gallery">
+      <a class="custom-succulent-photo" href="img/productos/WhatsApp%20Image%202026-08-24%20at%2020.01.21%20(1).jpeg" target="_blank"><img src="img/productos/WhatsApp Image 2026-08-24 at 20.01.21 (1).jpeg" alt="Jardín de suculentas" loading="lazy"><span>Jardín de suculentas</span></a>
+      <a class="custom-succulent-photo" href="img/productos/WhatsApp%20Image%202026-08-24%20at%2020.01.21%20(2).jpeg" target="_blank"><img src="img/productos/WhatsApp Image 2026-08-24 at 20.01.21 (2).jpeg" alt="Canaleta de suculentas" loading="lazy"><span>Canaleta de suculentas</span></a>
+      <a class="custom-succulent-photo" href="img/productos/WhatsApp%20Image%202026-08-24%20at%2020.01.21%20(3).jpeg" target="_blank"><img src="img/productos/WhatsApp Image 2026-08-24 at 20.01.21 (3).jpeg" alt="Torre de suculentas" loading="lazy"><span>Torre de suculentas</span></a>
+    </div>
+    <div class="custom-succulent-order"><div><h3>Arreglo de suculentas a pedido</h3><p>Elige el estilo, colores y tamaño. También preparamos ramos de flores de suculentas para regalar.</p></div><div class="custom-succulent-actions"><a class="btn" id="arregloSuculentaWa" href="#" target="_blank">💬 Pedir un arreglo</a><a class="btn" id="ramoSuculentaWa" href="#" target="_blank">💬 Pedir un ramo</a></div></div>
+  </div>
+</section>
+
+<section class="social-section" id="sociales">
+  <div class="section-header">
+    <h2>Conecta con Plantas_Odette_Ygg</h2>
+    <p>Sigue nuestras historias y novedades: lanzamientos, consejos de cuidado y creaciones únicas para tu hogar.</p>
+  </div>
+  <div class="social-grid">
+    <div class="social-card instagram">
+      <div class="social-card-top">
+        <div class="social-icon">
+            <!-- Instagram SVG -->
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+              <linearGradient id="igGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#f58529"/>
+                <stop offset="50%" stop-color="#dd2a7b"/>
+                <stop offset="100%" stop-color="#515bd4"/>
+              </linearGradient>
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="url(#igGrad)"></rect>
+              <path d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6z" fill="#fff" opacity="0.95"></path>
+              <circle cx="17.5" cy="6.5" r="1" fill="#fff" opacity="0.95"></circle>
+            </svg>
+        </div>
+        <div>
+          <div class="social-name">Instagram</div>
+          <div class="social-handle">@plantas_odette_ygg</div>
+        </div>
+      </div>
+      <p>Inspiración curada y colecciones en imágenes, con detalles y cuidados de cada pieza.</p>
+      <a class="btn-social" id="instagramBtn" href="#" target="_blank" rel="noopener noreferrer">Abrir Instagram</a>
+    </div>
+    <div class="social-card tiktok">
+      <div class="social-card-top">
+        <div class="social-icon">
+          <!-- TikTok-like SVG -->
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+            <path d="M10.8 5.2v8.1a2.9 2.9 0 1 1-2.1-2.8V8.2a5.2 5.2 0 1 0 5.3 5.1V8.1c1 .8 2.1 1.3 3.4 1.4V6.8c-1.9-.1-3.3-.7-4.2-1.6-.7-.6-1.1-1.3-1.3-2h-1.1z" fill="#25F4EE" transform="translate(-1 1)"></path>
+            <path d="M10.8 5.2v8.1a2.9 2.9 0 1 1-2.1-2.8V8.2a5.2 5.2 0 1 0 5.3 5.1V8.1c1 .8 2.1 1.3 3.4 1.4V6.8c-1.9-.1-3.3-.7-4.2-1.6-.7-.6-1.1-1.3-1.3-2h-1.1z" fill="#FE2C55" transform="translate(1 -1)"></path>
+            <path d="M10.8 5.2v8.1a2.9 2.9 0 1 1-2.1-2.8V8.2a5.2 5.2 0 1 0 5.3 5.1V8.1c1 .8 2.1 1.3 3.4 1.4V6.8c-1.9-.1-3.3-.7-4.2-1.6-.7-.6-1.1-1.3-1.3-2h-1.1z" fill="#111"></path>
+          </svg>
+        </div>
+        <div>
+          <div class="social-name">TikTok</div>
+          <div class="social-handle">@plantas_odette_ygg</div>
+        </div>
+      </div>
+      <p>Videos breves con consejos prácticos, procesos del taller y formas creativas de integrar plantas en tus espacios.</p>
+      <a class="btn-social" id="tiktokBtn" href="#" target="_blank" rel="noopener noreferrer">Abrir TikTok</a>
+    </div>
+    <div class="social-card whatsapp">
+      <div class="social-card-top">
+        <div class="social-icon">
+          <!-- WhatsApp SVG -->
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="10" fill="#25D366"></circle>
+            <path d="M17.6 14.2c-.3-.1-1.8-.9-2-.9s-.4-.1-.6.1-.7.9-.9 1.1-.3.2-.6.1c-1-.4-2.1-1.2-2.9-2.6-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.6.1-.2 0-.4 0-.6 0-.3-.6-1.2-.8-1.6-.2-.4-.5-.3-.7-.3h-.6c-.2 0-.5.1-.7.4-.2.3-.8.9-.8 2s.8 2.7.9 2.9c.1.2 1.6 2.6 3.8 3.6 1 .4 1.5.4 2 .3.3 0 1.4-.6 1.7-1.2.3-.6.3-1.1.2-1.2-.1-.2-.3-.3-.6-.4z" fill="#fff"></path>
+          </svg>
+        </div>
+        <div>
+          <div class="social-name">WhatsApp</div>
+          <div class="social-handle">Chat directo</div>
+        </div>
+      </div>
+      <p>Atención personalizada y pedidos directos: responde tus consultas y cotizaciones al instante.</p>
+      <a class="btn-social" id="whatsappBtn" href="#" target="_blank">Iniciar chat</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/catalogo.js"></script>
+</body>
+</html>
