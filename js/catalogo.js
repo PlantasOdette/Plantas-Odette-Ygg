@@ -37,7 +37,7 @@ function setProductPrices(name, prices, category){
 
 [
   ['Ficus',['$10.000','$8.000','$15.000']], ['Ficus lyrata',['$10.000']], ['Ficus benjamina variegado',['$8.000','$15.000']], ['Ficus variado (blanco)',['$14.000']], ['Gomero variado de color',['$9.000']],
-  ['Yuca chica',['$10.000','$12.000']], ['Monstera deliciosa',['$6.000','$10.000']], ['Monstera variagada',['$18.000']],
+  ['Yuca',['$10.000','$12.000']], ['Monstera deliciosa',['$6.000','$10.000']], ['Monstera variagada',['$18.000']],
   ['gomero o Ficus elastica',['$6.000','$8.000','$15.000']], ['Gomero pera (lirata)',['$10.000']], ['Aralia Japonesa',['$1.500']], ['Schefflera',['$4.000']],
   ['lavanda dentada',['$40.000']], ['Romero',['$3.000']], ['Cedrón',['$4.000']], ['Menta',['$1.000']], ['Poleo',['$1.000']], ['Orégano',['$1.000']], ['Ruda',['$1.000']], ['Torongil',['$1.000']], ['Melisa',['$1.000']],
   ['Tradiscantia mora',['$4.000']], ['Dolar Negro',['$6.000','$40.000']], ['Dolar amarillo',['$4.000','$7.000']], ['Dolar verde',['$4.000','$7.000']], ['Colgante',['$7.000']], ['Sisu',['$4.000']], ['helecho espada',['$7.000']],
@@ -105,9 +105,9 @@ if(terraFertilFinal){
     care:'Mezcla orgánica de tierra de hojas, humus, guano rojo y compost. Contenido: aproximadamente 2,5 litros.'
   },
   {
-    n:'Sustrato TerraFértil (2,5 kilos)', c:'sustrato', p:'Desde $1.000',
+    n:'Sustrato TerraFértil pequeño', c:'sustrato', p:'Desde $1.000',
     img:'img/sustratos/6, Tierra Fert desde 1,000.jpeg',
-    care:'Sustrato TerraFértil multiuso para plantas de interior y exterior. Contenido: 2,5 kilos.'
+    care:'Sustrato TerraFértil multiuso para plantas de interior y exterior. Contenido aproximado: entre 1,5 y 1,7 kg.'
   }
 ].forEach(product => {
   if(!PRODUCTS.some(item => normalizeProductName(item.n) === normalizeProductName(product.n))){
@@ -144,7 +144,7 @@ const incomingProductUpdates = [
   {names:['Apio'], name:'Apio', category:'huerto', prices:[['S','$1.000']], image:'img/productos/WhatsApp Image 2026-08-03 at 14.57.58 (1).jpeg'},
   {names:['Kalanchoe','Kalanchoe blossfeldiana'], name:'Kalanchoe blossfeldiana', category:'suculentas', prices:[['','$4.500']]},
   {names:['Drácena','Dracena Verde'], name:'Dracena Verde', category:'interior', prices:[['M','$6.000']]},
-  {names:['Verónica Jade','Verónica jade'], name:'Verónica jade', category:'suculentas', prices:[['S','$5.500']], image:'img/productos/WhatsApp Image 2026-08-03 at 14.58.20 (5).jpeg'},
+  {names:['Verónica Jade','Verónica jade'], name:'Verónica jade', category:'exterior', prices:[['S','$5.500']], image:'img/productos/WhatsApp Image 2026-08-03 at 14.58.20 (5).jpeg'},
   {names:['Crisantemos'], name:'Crisantemos', category:'exterior', prices:[['M','$4.500']]},
   {names:['Yedra','Hiedra Variegada'], name:'Hiedra Variegada', category:'interior', prices:[['M','$6.000']], image:'img/productos/WhatsApp Image 2026-08-03 at 14.58.24 (1).jpeg'},
   {names:['Romero'], name:'Romero', category:'huerto', prices:[['M','$3.000']]},
@@ -171,7 +171,7 @@ incomingProductUpdates.forEach(update => {
   if(update.image) product.img = update.image;
 });
 const restoredProducts = [
-  ['Yuca chica','$10.000','img/productos/WhatsApp Image 2026-08-03 at 14.55.15 (1).jpeg'],
+  ['Yuca','$10.000','img/productos/WhatsApp Image 2026-08-03 at 14.55.15 (1).jpeg'],
   ['Monstera variagada','$18.000','img/temporales/plantas-faltantes/Monstera Variagada Desde $20.000.jpeg'],
   ['Gomero pera (lirata)','$10.000','img/temporales/plantas-faltantes/Gomero pera (Lirata) Desde $ 10.000.jpeg'],
   ['Cedrón','$3.000','img/plantas/Romero Desde 3.000.jpeg'],
@@ -194,7 +194,7 @@ restoredProducts.forEach(([name, price, image]) => {
 });
 const calas = PRODUCTS.find(item => item.n === 'Calas de colores');
 const restoredSizes = {
-  'Yuca chica': [['S','$10.000'],['M','$12.000']],
+  'Yuca': [['S','$10.000'],['M','$12.000']],
   'Gomero pera (lirata)': [['S','$10.000']],
   'Dolar amarillo': [['S','$4.000'],['M','$7.000']],
   'Dolar verde': [['S','$4.000'],['M','$7.000']],
@@ -239,7 +239,7 @@ addPhotoProduct('Dracena marginata', 'interior', 'WhatsApp Image 2026-08-03 at 1
 addPhotoProduct('Dracena verde', 'interior', 'WhatsApp Image 2026-08-03 at 14.58.17 (1).jpeg');
 setProductPhoto('Dracaena marginata (doble)', 'WhatsApp Image 2026-08-03 at 14.56.11 (3).jpeg');
 setProductPhoto('Ficus mini blanco', 'ficus-mini-nuevo.jpeg');
-setProductPhoto('Yuca chica', 'WhatsApp Image 2026-08-03 at 14.55.15 (1).jpeg');
+setProductPhoto('Yuca', 'WhatsApp Image 2026-08-03 at 14.55.15 (1).jpeg');
 setProductPhoto('Dracena Lemon Lime', 'WhatsApp Image 2026-08-03 at 14.49.47.jpeg');
 setProductPhoto('Ficus benjamina variegado', 'WhatsApp Image 2026-08-03 at 14.43.53 (1).jpeg');
 setProductPhoto('Cóleo', 'WhatsApp Image 2026-08-03 at 14.50.17 (4).jpeg');
@@ -287,7 +287,7 @@ if(cedronPhotoProduct){
 if(sisuPhotoProduct){
   sisuPhotoProduct.img = 'img/plantas/Sisu Desde 4.000.jpeg';
   sisuPhotoProduct.p = 'Desde $4.000';
-  sisuPhotoProduct.care = 'Suculenta colgante de tallos rastreros y hojas carnosas delicadas (Sedum morganianum). · Ubicación: Interior muy luminoso o exterior cálido y protegido de heladas. · Luz: Alta; admite sol parcial y sol directo gradual. · Riego: Bajo; deja secar completamente el sustrato antes de volver a regar y reduce el riego en invierno. · Sustrato: Suelto y con excelente drenaje; evita que quede agua en el plato. · Cuidados: Manipula con suavidad, pues sus hojas se desprenden fácilmente.';
+  sisuPhotoProduct.care = 'Planta de follaje verde y tallos colgantes. Ubicación: interior con buena luz indirecta; en exterior, mantener en sombra luminosa y protegida del frío. Riego moderado cuando la superficie del sustrato comience a secarse. Usa un sustrato aireado y evita el encharcamiento.';
 }
 clearProductPhoto('Claveles');
 clearProductPhoto('Saxifraga fresa');
@@ -365,7 +365,6 @@ for(let index = PRODUCTS.length - 1; index >= 0; index--){
   {names:['Clavel'], n:'Clavel', c:'exterior', p:'$1.000', image:'Clavel Desde $1.000.jpeg'},
   {names:['Lotus berthelotii'], n:'Lotus berthelotii', c:'exterior', p:'$6.000', image:'Lotus berthelotii Desde $ 6.000.jpeg'},
   {names:['Menta'], n:'Menta', c:'huerto', p:'$1.000', image:'Menta Desde $ 1.000.jpeg'},
-  {names:['Yerba buena'], n:'Yerba buena', c:'huerto', p:'$1.000', image:'Yerba buena Desde $ 1.000.jpeg'},
   {names:['Tradescantia Pink','Tradiscantia'], n:'Tradescantia Pink', c:'interior', p:'$3.000', image:'Tradiscantia Desde 3.000.jpeg'}
 ].forEach(update=>{
   let product = PRODUCTS.find(item => update.names.some(name => normalizeProductName(item.n) === normalizeProductName(name)));
@@ -419,8 +418,8 @@ PRODUCTS.forEach(product => {
 
 const missingPlantCategoryUpdates = {
   'Cedrón':'huerto',
-  'Dolar verde':'suculentas',
-  'Sisu':'suculentas',
+  'Dolar verde':'interior',
+  'Sisu':'interior',
   'Saxifraga fresa':'interior',
   'Pilea cadierei':'interior',
   'Dolar Negro':'interior'
@@ -516,7 +515,7 @@ if(filodendroPink){
 
 [
   {n:'Monstera Adansonii', c:'interior', p:'Desde $10.000', img:'img/plantas/Monstera Adansonii desde 10.000.jpeg'},
-  {n:'Yuca Grande', c:'exterior', p:'$39.000', img:'img/plantas/Yuca Grande 39.000.jpeg'},
+  {n:'Yuca doble', c:'exterior', p:'$39.000', img:'img/plantas/Yuca Grande 39.000.jpeg'},
   {n:'Ficus Repen', c:'interior', p:'Desde $4.500', img:'img/plantas/Ficus Repen desde 4.500.jpeg'},
   {n:'Filodendro Rojo Congo', c:'interior', p:'Desde $21.000', img:'img/plantas/Filodendro Rojo Congo desde 21.000.jpeg'}
 ].forEach(update => {
@@ -524,6 +523,67 @@ if(filodendroPink){
   if(product) Object.assign(product, update);
   else PRODUCTS.push({...update, care:'Consulta disponibilidad y cuidados por WhatsApp.'});
 });
+
+PRODUCTS.filter(product => product.c === 'suculentas').forEach(product => {
+  product.p = '$2.000';
+  if(Array.isArray(product.sizes)){
+    product.sizes.forEach(size => {
+      size.p = '$2.000';
+    });
+  }
+});
+
+const hierbabuena = findProductByName('Hierbabuena');
+if(hierbabuena) hierbabuena.p = 'Desde $1.000';
+
+const euphorbiaMilii = findProductByName('Euphorbia milii (Corona de Cristo)');
+if(euphorbiaMilii) euphorbiaMilii.p = 'Desde $8.000';
+
+const revisedSubstrateInformation = {
+  'Sustrato TerraFértil (multiuso interior/exterior)': {
+    p:'$4.000', img:'img/sustratos/Tierra 5, $ 4.000 (5,50 a 6 Kilos).jpeg',
+    care:'Sustrato TerraFértil multiuso para plantas de interior y exterior, compuesto por tierra de hojas y compost. Contenido aproximado: entre 5,5 y 6 kg.'
+  },
+  'Tierra de Hojas + Compost + Perlita': {
+    p:'Desde $1.200', img:'img/sustratos/7. Sustrato tierra de hojas ,compot y perlitas desde 1.200   , 2,60 a 2,80 kilos aprox.jpeg',
+    care:'Sustrato especial de tierra de hojas, compost y perlita. Contenido aproximado: entre 2,6 y 2,8 kg.'
+  },
+  'Sustrato Premium': {
+    p:'$2.000', img:'img/sustratos/Sustrato premium 2.000, kilos 2,,87 a 3 aprox.jpeg',
+    care:'Sustrato premium con tierra de hojas, compost, perlita, humus de lombriz y NPK. Presentación de 2,5 L aprox.; peso aproximado: entre 2,87 y 3 kg.'
+  },
+  'Sustrato 4 Tierras (Verito Jardín)': {
+    p:'$4.000', img:'img/sustratos/5 , 4 Tierras  desde 4.000, 6,50 a 6,70 kilod aprox.jpeg',
+    care:'Mezcla de tierra de hojas, humus, guano rojo y compost. Presentación de 2,5 L aprox.; peso aproximado: entre 6,5 y 6,7 kg.'
+  },
+  'Sustrato TerraFértil pequeño': {
+    n:'Sustrato TerraFértil pequeño', p:'Desde $1.000',
+    img:'img/sustratos/6, Tierra Fert desde 1,000 , 1,70 a 1,90 kilos aprox.jpeg',
+    care:'Sustrato TerraFértil multiuso para plantas de interior y exterior. Contenido aproximado: entre 1,7 y 1,9 kg.'
+  }
+};
+Object.entries(revisedSubstrateInformation).forEach(([name, update]) => {
+  const product = findProductByName(name);
+  if(product) Object.assign(product, update);
+});
+
+const largePremiumSubstrate = {
+  n:'Sustrato Premium grande', c:'sustrato', p:'$5.000',
+  img:'img/sustratos/tierra-4-5000, kilos 8,10 a 8,30 aprox.jpeg',
+  care:'Sustrato premium con tierra de hojas, compost, perlita, humus de lombriz y NPK. Peso aproximado: entre 8,1 y 8,3 kg.'
+};
+if(!PRODUCTS.some(product => normalizeProductName(product.n) === normalizeProductName(largePremiumSubstrate.n))){
+  PRODUCTS.push(largePremiumSubstrate);
+}
+
+const copoDeNieve = {
+  n:'Copo de nieve', c:'exterior', p:'Desde $16.000',
+  img:'img/plantas/Copo De nieve desde 16.000.jpeg',
+  care:'· Ubicación: Exterior. · Luz: Sol directo o semisombra; en verano caluroso, mejor semisombra por la tarde. · Riego: Mantener el suelo húmedo, sin encharcar; regar más en periodos secos. · Suelo: Húmedo y bien drenado. · Poda: Retirar tallos viejos para renovar el arbusto.'
+};
+if(!PRODUCTS.some(product => normalizeProductName(product.n) === normalizeProductName(copoDeNieve.n))){
+  PRODUCTS.push(copoDeNieve);
+}
 
 const CATS = {
   "interior": "🌿 Interior",
@@ -575,9 +635,9 @@ const PURCHASE_INFO_STORIES = [
   {src:'img/informacion/1.jpeg', alt:'Bienvenida a Plantas Odette.'},
   {src:'img/informacion/2..jpeg', alt:'Información sobre tamaños y valores.'},
   {src:'img/informacion/3.jpeg', alt:'Información sobre formas de pago.'},
-  {src:'img/informacion/4.jpeg', alt:'Información sobre el monto mínimo de compra.'},
+  {src:'img/informacion/4..jpeg', alt:'Información sobre el monto mínimo de compra.'},
   {src:'img/informacion/5.jpeg', alt:'Ayuda para encontrar una planta o recibir recomendaciones.'},
-  {src:'img/informacion/6.jpeg', alt:'Información sobre despachos y entregas.'},
+  {src:'img/informacion/6..jpeg', alt:'Información sobre despachos y entregas.'},
   {src:'img/informacion/7..jpeg', alt:'Cierre de la información de compras y envíos.'}
 ];
 const PURCHASE_INFO_STORY_DURATION = 9000;
@@ -691,7 +751,7 @@ function buildCategoryBubbles(){
   const categories = ["featured", "all", "interior", "exterior", "suculentas", "huerto", "maceteros", "sustrato"];
   const categoryBubbles = categories.map(category => {
     const label = category === "featured" ? "✨ Destacadas" : category === "all" ? "Todos" : CATS[category];
-    const substrateProduct = category === "sustrato" ? PRODUCTS.find(product => product.n === "Tierra de Hojas + Compost + Perlita" && product.img) : null;
+    const substrateProduct = category === "sustrato" ? PRODUCTS.find(product => product.n === "Sustrato Premium" && product.img) : null;
     const representativePlant = ["all", "frutales"].includes(category)
       ? PRODUCTS.find(product => (category !== "frutales" || product.c === category) && product.img && !["sustrato", "maceteros", "amigurumis"].includes(product.c))
       : null;
@@ -904,7 +964,7 @@ function render(){
     const realIdx = PRODUCTS.indexOf(p);
     const img = productImageSrc(p.img);
     const isGuano = p.n === 'Guano Rojo Reforzado N-P-K';
-    const imageClass = p.n === 'Sustrato Premium' ? 'thumb premium-substrate-photo' : p.n === 'Tierra de Hojas + Compost + Perlita' ? 'thumb soil-mix-photo' : 'thumb';
+    const imageClass = p.n.startsWith('Sustrato Premium') ? 'thumb premium-substrate-photo' : p.n === 'Tierra de Hojas + Compost + Perlita' ? 'thumb soil-mix-photo' : 'thumb';
     const isPlant = ['interior', 'exterior', 'suculentas', 'frutales', 'huerto'].includes(p.c);
     const currentPrice = String(p.p || '').trim();
     const cardPrice = isPlant && currentPrice && !/^sin precio$/i.test(currentPrice)
@@ -938,7 +998,7 @@ function openModal(idx){
   modalImg.src = productImageSrc(p.img);
   modalImg.alt = p.n;
   modalImg.parentElement.classList.toggle('guano-photo-frame', p.n === 'Guano Rojo Reforzado N-P-K');
-  modalImg.parentElement.classList.toggle('premium-substrate-photo-frame', p.n === 'Sustrato Premium');
+  modalImg.parentElement.classList.toggle('premium-substrate-photo-frame', p.n.startsWith('Sustrato Premium'));
   modalImg.parentElement.classList.toggle('soil-mix-photo-frame', p.n === 'Tierra de Hojas + Compost + Perlita');
   document.getElementById("modalCat").textContent = CATS[p.c]||'';
   document.getElementById("modalName").textContent = p.n;
