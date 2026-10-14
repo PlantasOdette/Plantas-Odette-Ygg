@@ -38,18 +38,18 @@ function setProductPrices(name, prices, category){
 [
   ['Ficus',['$10.000','$8.000','$15.000']], ['Ficus lyrata',['$10.000']], ['Ficus benjamina variegado',['$8.000','$15.000']], ['Ficus variado (blanco)',['$14.000']], ['Gomero variado de color',['$9.000']],
   ['Yuca chica',['$10.000','$12.000']], ['Monstera deliciosa',['$6.000','$10.000']], ['Monstera variagada',['$18.000']],
-  ['gomero o Ficus elastica',['$6.000','$8.000','$15.000']], ['Gomero pera (lirata)',['$10.000']], ['Aralia Japonesa',['$8.000']], ['Schefflera',['$4.000']],
+  ['gomero o Ficus elastica',['$6.000','$8.000','$15.000']], ['Gomero pera (lirata)',['$10.000']], ['Aralia Japonesa',['$1.500']], ['Schefflera',['$4.000']],
   ['lavanda dentada',['$40.000']], ['Romero',['$3.000']], ['Cedrón',['$4.000']], ['Menta',['$1.000']], ['Poleo',['$1.000']], ['Orégano',['$1.000']], ['Ruda',['$1.000']], ['Torongil',['$1.000']], ['Melisa',['$1.000']],
   ['Tradiscantia mora',['$4.000']], ['Dolar Negro',['$6.000','$40.000']], ['Dolar amarillo',['$4.000','$7.000']], ['Dolar verde',['$4.000','$7.000']], ['Colgante',['$7.000']], ['Sisu',['$4.000']], ['helecho espada',['$7.000']],
-  ['Naranjo amor',['$4.000']], ['Mala madre verde',['$4.000']], ['Cinta blanca',['$5.000']], ['Matico grande',['$3.000']], ['Corona de Cristo',['$6.000']], ['Cucharitas',['$6.000','$10.000']], ['filodendro paraguayo',['$7.000']],
-  ['Verónica Hebe',['$4.000']], ['Pilea Peperomioides (peperonia)',['$4.000']], ['planta rosario',['$3.000','$5.000','$7.000']], ['violetas de Persia',['$7.000']], ['Hierba gatera',['$3.000']], ['Ala de ángel',['$4.000','$9.000']], ['Cineraria',['$4.000']], ['Spathiphyllum',['$16.000']], ['Dracena Marginata',['$12.000']],
-  ['Paquerette Amarillo',['$5.000']], ['Verónica jade',['$10.000']], ['Pata de jaiba',['$7.000']], ['Jazmín del Cabo',['$8.000']], ['Crisantemos',['$4.000','$6.000']], ['Buganvilia',['$12.000']], ['Calas de colores',['$14.000']], ['Cóleo',['$3.000']], ['Pilea cadierei',['$2.500','$4.000']], ['Arboles frutales',['$12.000','$15.000']]
+  ['Naranjo amor',['$4.000']], ['Mala madre verde',['$3.000']], ['Cinta blanca',['$4.000']], ['Matico grande',['$3.000']], ['Corona de Cristo',['$6.000']], ['Cucharitas',['$6.000','$10.000']], ['filodendro paraguayo',['$5.000']],
+  ['Verónica Hebe',['$4.000']], ['Pilea Peperomioides (peperonia)',['$4.000']], ['planta rosario',['$3.000','$5.000','$7.000']], ['violetas de Persia',['$7.000']], ['Hierba gatera',['$2.000']], ['Ala de ángel',['$4.000','$9.000']], ['Cineraria',['$4.000']], ['Spathiphyllum',['$12.000']], ['Dracena Marginata',['$12.000']],
+  ['Paquerette Amarillo',['$5.000']], ['Verónica jade',['$10.000']], ['Pata de jaiba',['$7.000']], ['Jazmín del Cabo',['$8.000']], ['Crisantemos',['$4.000','$6.000']], ['Buganvilia',['$14.000']], ['Calas de colores',['$8.000']], ['Cóleo',['$3.000']], ['Pilea cadierei',['$2.500','$4.000']], ['Arboles frutales',['$12.000','$15.000']]
 ].forEach(([name, prices]) => setProductPrices(name, prices));
 
 const substrateUpdates = {
   'Fibra de Coco (Verito Jardín)': {p:'$2.000'},
-  'Tierra de Hojas + Compost + Perlita': {p:'$2.000', care:'Mezcla de tierra de hojas, compost y perlita. Contenido: 2,5 kilos y medio.'},
-  'Sustrato TerraFértil (multiuso interior/exterior)': {p:'$4.000', care:'Sustrato especial para plantas de interior y exterior. Contenido: 6 kilos.', sizes:null},
+  'Tierra de Hojas + Compost + Perlita': {p:'Desde $1.200', care:'Mezcla de tierra de hojas, compost y perlita. Contenido: 2,5 kilos y medio.'},
+  'Sustrato TerraFértil (multiuso interior/exterior)': {p:'Desde $3.000', care:'Sustrato especial para plantas de interior y exterior. Contenido: 6 kilos.', sizes:null},
   'Guano Rojo Reforzado N-P-K': {
     p:'$2.000',
     care:'Fertilizante N-P-K que complementa la nutrición y apoya el crecimiento, la floración y la fructificación. Combínalo en el sustrato base, como TerraFértil o tierra de hojas + compost + perlita; no reemplaza la mezcla. Puede servir a plantas ornamentales, florales, de huerto y frutales en crecimiento. Sigue la dosis indicada en el envase y evita aplicarlo concentrado sobre las raíces; úsalo con moderación en suculentas.'
@@ -63,18 +63,18 @@ Object.entries(substrateUpdates).forEach(([name, update]) => {
 });
 const substratePhotoUpdates = {
   'Sustrato TerraFértil (multiuso interior/exterior)': {
-    p:'$800', img:'img/sustratos/tierra-1-800.jpeg',
+    p:'Desde $3.000', img:'img/sustratos/tierra-1-800.jpeg',
     care:'Sustrato TerraFértil para plantas de interior y exterior. Mezcla de tierra de hojas y compost.'
   },
   'Tierra de Hojas + Compost + Perlita': {
-    p:'$1.000', img:'img/sustratos/tierra-2-1500.jpeg',
+    p:'Desde $1.200', img:'img/sustratos/7. Sustrato tierra de hojas ,compot y perlitas desde 1.200.jpeg',
     care:'Sustrato especial para plantas de interior y exterior. Composición: tierra de hojas, compost y perlita. Contenido: 2,5 kilos.'
   },
   'Guano Rojo Reforzado N-P-K': {
-    p:'$2.000'
+    p:'$2.000', img:'img/sustratos/Guano 7, $ 2.000.jpeg'
   },
   'Sustrato TerraFértil (multiuso interior/exterior)': {
-    p:'$4.000', img:'img/sustratos/Tierra 5, $ 4.000 (6 Kilos).jpeg',
+    p:'Desde $3.000', img:'img/sustratos/Tierra 5, $ 4.000 (6 Kilos).jpeg',
     care:'Sustrato TerraFértil para plantas de interior y exterior, compuesto por tierra de hojas y compost. Contenido: 6 kilos.'
   }
 };
@@ -82,6 +82,12 @@ Object.entries(substratePhotoUpdates).forEach(([name, update]) => {
   const product = PRODUCTS.find(item => item.n === name);
   if(product) Object.assign(product, update);
 });
+
+const terraFertilFinal = PRODUCTS.find(item => item.n === 'Sustrato TerraFértil (multiuso interior/exterior)');
+if(terraFertilFinal){
+  terraFertilFinal.p = 'Desde $3.000';
+  terraFertilFinal.care = 'Sustrato especial para plantas de interior y exterior. Contenido: 6 kilos.';
+}
 [
   {
     n:'Humus orgánico de lombriz', c:'sustrato', p:'$2.000',
@@ -92,6 +98,16 @@ Object.entries(substratePhotoUpdates).forEach(([name, update]) => {
     n:'Sustrato Premium', c:'sustrato', p:'$2.000',
     img:'img/sustratos/tierra-4-2000.jpeg',
     care:'Sustrato premium con tierra de hojas, compost, perlita, humus de lombriz y NPK. Retiene humedad.'
+  },
+  {
+    n:'Sustrato 4 Tierras (Verito Jardín)', c:'sustrato', p:'$4.000',
+    img:'img/sustratos/5 , 4 Tierras  desde 4.000.jpeg',
+    care:'Mezcla orgánica de tierra de hojas, humus, guano rojo y compost. Contenido: aproximadamente 2,5 litros.'
+  },
+  {
+    n:'Sustrato TerraFértil (2,5 kilos)', c:'sustrato', p:'Desde $1.000',
+    img:'img/sustratos/6, Tierra Fert desde 1,000.jpeg',
+    care:'Sustrato TerraFértil multiuso para plantas de interior y exterior. Contenido: 2,5 kilos.'
   }
 ].forEach(product => {
   if(!PRODUCTS.some(item => normalizeProductName(item.n) === normalizeProductName(product.n))){
@@ -102,12 +118,12 @@ const requestedProductUpdates = {
   'Almendro Non Pareil': {p:'$15.000'},
   'Crassula dejecta': {p:'$4.500'},
   'Rebutia albiflora': {p:'$3.500'},
-  'Pinos azules': {p:'$15.000', sizes:[{l:'S', p:'$15.000'}], care:'Ubicación: exterior, a pleno sol. Tamaño S. Riego cada 7-10 días y suelo bien drenado.'},
+  'Pinos azules': {p:'$16.000', sizes:[{l:'S', p:'$16.000'}], care:'Ubicación: exterior, a pleno sol. Tamaño S. Riego cada 7-10 días y suelo bien drenado.'},
   'Ficus benjamina': {p:'Desde $8.000', sizes:[{l:'S',p:'$8.000'},{l:'M',p:'$10.000'}]},
   'Schefflera': {n:'Chiflera', p:'$4.000', sizes:[{l:'S',p:'$4.000'}]},
-  'Dolar Negro': {p:'Desde $4.000', sizes:[{l:'S',p:'$4.000'},{l:'M',p:'$6.000'}]},
+  'Dolar Negro': {p:'Desde $3.000', sizes:[{l:'S',p:'$3.000'},{l:'M',p:'$40.000'}]},
   'lavanda dentada': {p:'$4.000'},
-  'Cala Amarilla': {n:'Calas de colores', p:'$14.000'},
+  'Cala Amarilla': {n:'Calas de colores', p:'$8.000'},
   'Claveles': {p:'$2.000'}
 };
 Object.entries(requestedProductUpdates).forEach(([name, update]) => {
@@ -122,7 +138,7 @@ const incomingProductUpdates = [
   {names:['Dracaena marginata (doble)','Dracena Marginata'], name:'Dracaena marginata (doble)', category:'interior', prices:[['XL','$27.000']], image:'img/productos/WhatsApp Image 2026-08-03 at 14.56.11 (3).jpeg'},
   {names:['Ficus mini blanco'], name:'Ficus mini blanco', category:'interior', prices:[['M','$7.000']], image:'img/productos/WhatsApp Image 2026-08-03 at 14.58.21 (3).jpeg'},
   {names:['Ficus común'], name:'Ficus común', category:'interior', prices:[['M','$8.000']], image:'img/productos/WhatsApp Image 2026-08-03 at 14.54.57 (1).jpeg'},
-  {names:['Sinapsus','Scindapsus Pothos'], name:'Scindapsus Pothos', category:'interior', prices:[['S','$3.500']], image:'img/productos/WhatsApp Image 2026-08-03 at 14.56.10.jpeg'},
+  {names:['Sinapsus','Scindapsus Pothos'], name:'Scindapsus Pothos', category:'interior', prices:[['S','$3.000'],['M','$5.000'],['L','$7.000']], image:'img/productos/WhatsApp Image 2026-08-03 at 14.56.10.jpeg'},
   {names:['Ficus enano blanco'], name:'Ficus enano blanco', category:'interior', prices:[['M','$11.000']], image:'img/productos/WhatsApp Image 2026-08-03 at 14.55.29 (2).jpeg'},
   {names:['Singonio'], name:'Singonio', category:'interior', prices:[['S','$3.500']], image:'img/productos/WhatsApp Image 2026-08-03 at 14.56.16 (2).jpeg'},
   {names:['Apio'], name:'Apio', category:'huerto', prices:[['S','$1.000']], image:'img/productos/WhatsApp Image 2026-08-03 at 14.57.58 (1).jpeg'},
@@ -133,8 +149,8 @@ const incomingProductUpdates = [
   {names:['Yedra','Hiedra Variegada'], name:'Hiedra Variegada', category:'interior', prices:[['M','$6.000']], image:'img/productos/WhatsApp Image 2026-08-03 at 14.58.24 (1).jpeg'},
   {names:['Romero'], name:'Romero', category:'huerto', prices:[['M','$3.000']]},
   {names:['Cineraria'], name:'Cineraria', category:'exterior', prices:[['M','$2.500']]},
-  {names:['Flor del Pájaro','Strelitzia (Ave del Paraíso)'], name:'Strelitzia (Ave del Paraíso)', category:'exterior', prices:[['M','$8.600']]},
-  {names:['Yuca pata de elefante'], name:'Yuca pata de elefante', category:'exterior', prices:[['','$24.000']], image:'img/productos/75cb49b7-7901-41df-ad5d-20a40c879d81.jpg'},
+  {names:['Flor del Pájaro','Strelitzia (Ave del Paraíso)'], name:'Strelitzia (Ave del Paraíso)', category:'exterior', prices:[['M','$10.000']]},
+  {names:['Yuca pata de elefante'], name:'Yuca pata de elefante', category:'exterior', prices:[['','$20.000']], image:'img/productos/75cb49b7-7901-41df-ad5d-20a40c879d81.jpg'},
   {names:['Celosía plumosa'], name:'Celosía plumosa', category:'exterior', prices:[['M','$8.000']], image:'img/productos/WhatsApp Image 2026-08-03 at 14.44.21.jpeg'}
 ];
 
@@ -162,14 +178,14 @@ const restoredProducts = [
   ['Dolar verde','Desde $4.000','img/temporales/plantas-faltantes/Dolar Desde $ 3.000.jpeg'],
   ['Sisu','Desde $4.000','img/plantas/Sisu Desde 4.000.jpeg'],
   ['Naranjo amor','$4.000','img/productos/WhatsApp Image 2026-08-24 at 20.01.21 (1).jpeg'],
-  ['Mala madre verde','$4.000','img/plantas/Cinta Verde (Mala madre) Desde $ 4.000.jpeg'],
-  ['Cinta blanca','$5.000','img/temporales/plantas-faltantes/Chlorophytum comosum desde $ 4.000.jpeg'],
+  ['Mala madre verde','$3.000','img/plantas/Cinta Verde (Mala madre) Desde $ 4.000.jpeg'],
+  ['Cinta blanca','$4.000','img/temporales/plantas-faltantes/Chlorophytum comosum desde $ 4.000.jpeg'],
   ['Matico grande','$3.000','img/temporales/plantas-faltantes/Agapanto Desde $10.000.jpeg'],
   ['Corona de Inca','$6.000','img/temporales/plantas-faltantes/Clavelinas Desde $1.500.jpeg'],
   ['Cucharitas','Desde $6.000','img/plantas/Cucharita Desde $ 5.000.jpeg'],
   ['Ala de ángel','Desde $4.000','img/productos/ala-de-angel-nueva.jpg'],
   ['Verónica jade','$10.000','img/productos/WhatsApp Image 2026-08-03 at 14.58.20 (5).jpeg'],
-  ['Calas de colores','$14.000','img/plantas/Clavelinas Desde $1.500.jpeg']
+  ['Calas de colores','$8.000','img/plantas/Clavelinas Desde $1.500.jpeg']
 ];
 restoredProducts.forEach(([name, price, image]) => {
   if(!PRODUCTS.some(item => item.n.toLowerCase() === name.toLowerCase())){
@@ -190,7 +206,7 @@ Object.entries(restoredSizes).forEach(([name, values]) => {
   if(product){ product.p = `Desde ${values[0][1]}`; product.sizes = values.map(([l,p]) => ({l,p})); }
 });
 
-const suppliedPhotoPath = name => `img/productos/${name}`;
+const suppliedPhotoPath = name => `img/plantas/${name}`;
 const findProductByName = name => PRODUCTS.find(item => normalizeProductName(item.n) === normalizeProductName(name));
 const setProductPhoto = (name, fileName) => {
   const product = findProductByName(name);
@@ -211,8 +227,12 @@ const addPhotoProduct = (name, category, fileName) => {
 };
 
 addPhotoProduct('Helecho nido de ave', 'interior', 'WhatsApp Image 2026-08-03 at 14.43.52 (2).jpeg');
+const helechoNidoDeAve = findProductByName('Helecho nido de ave');
+if(helechoNidoDeAve) helechoNidoDeAve.p = 'Desde $12.000';
 addPhotoProduct('Flor de Pascua roja', 'interior', 'WhatsApp Image 2026-08-03 at 14.43.52 (3).jpeg');
 addPhotoProduct('Begonia rex rosada', 'interior', 'WhatsApp Image 2026-08-03 at 14.44.19 (3).jpeg');
+const begoniaRexRosada = findProductByName('Begonia rex rosada');
+if(begoniaRexRosada) begoniaRexRosada.p = '$8.000';
 addPhotoProduct('Ficus lyrata', 'interior', 'WhatsApp Image 2026-08-03 at 14.54.57 (1).jpeg');
 addPhotoProduct('Yuca pata de elefante', 'exterior', '75cb49b7-7901-41df-ad5d-20a40c879d81.jpg');
 addPhotoProduct('Dracena marginata', 'interior', 'WhatsApp Image 2026-08-03 at 14.56.08 (2).jpeg');
@@ -224,6 +244,23 @@ setProductPhoto('Dracena Lemon Lime', 'WhatsApp Image 2026-08-03 at 14.49.47.jpe
 setProductPhoto('Ficus benjamina variegado', 'WhatsApp Image 2026-08-03 at 14.43.53 (1).jpeg');
 setProductPhoto('Cóleo', 'WhatsApp Image 2026-08-03 at 14.50.17 (4).jpeg');
 setProductPhoto('Coleo', 'WhatsApp Image 2026-08-03 at 14.50.17 (4).jpeg');
+const coleoProduct = PRODUCTS.find(product => normalizeProductName(product.n).includes('coleo') || normalizeProductName(product.n).includes('celeo'));
+if(coleoProduct){
+  coleoProduct.n = 'Cóleo';
+  coleoProduct.c = 'interior';
+  coleoProduct.p = 'Desde $1.000';
+  coleoProduct.img = 'img/plantas/Cóleo desde 1.000.jpeg';
+  coleoProduct.care = 'Consulta disponibilidad y cuidados por WhatsApp.';
+  delete coleoProduct.sizes;
+} else {
+  PRODUCTS.push({
+    n:'Cóleo',
+    c:'interior',
+    p:'Desde $1.000',
+    img:'img/plantas/Cóleo desde 1.000.jpeg',
+    care:'Consulta disponibilidad y cuidados por WhatsApp.'
+  });
+}
 setProductPhoto('Romero', 'Romero Desde 3.000.jpeg');
 setProductPhoto('Ala de ángel', 'ala-de-angel-nueva.jpg');
 setProductPhoto('Monstera', '../temporales/plantas-faltantes/Mostera Desde $ 6.000.jpeg');
@@ -273,7 +310,7 @@ if(coronaIncaPhotoProduct){
 
 const ficusBlanco = findProductByName('Ficus benjamina variegado') || {n:'Ficus blanco', c:'interior', care:'Consulta disponibilidad y cuidados por WhatsApp.'};
 ficusBlanco.n = 'Ficus blanco';
-ficusBlanco.p = '$27.000';
+ ficusBlanco.p = '$12.000';
 delete ficusBlanco.sizes;
 ficusBlanco.img = suppliedPhotoPath('ficus-blanco-nuevo.jpeg');
 if(!PRODUCTS.includes(ficusBlanco)) PRODUCTS.push(ficusBlanco);
@@ -294,7 +331,9 @@ if(ficusBlanco && ficusMini && ficusEnano){
   if(ficusEnanoIndex !== -1) PRODUCTS.splice(ficusEnanoIndex, 1);
 }
 const coleus = PRODUCTS.find(item => item.n === 'CÃ³leo');
-if(coleus){ coleus.n = 'Cóleo'; coleus.img = suppliedPhotoPath('WhatsApp Image 2026-08-03 at 14.50.17 (4).jpeg'); }
+if(coleus){ coleus.n = 'Cóleo'; coleus.img = suppliedPhotoPath('Cóleo desde 1.000.jpeg'); }
+const philodendronErubescens = findProductByName('Philodendron erubescens');
+if(philodendronErubescens) philodendronErubescens.img = suppliedPhotoPath('Filodendro pink desde 21.000.jpeg');
 const aromaticProducts = PRODUCTS.filter(item => normalizeProductName(item.n).startsWith('hierba aromatica'));
 if(aromaticProducts.length > 1){
   aromaticProducts[0].n = 'Hierba aromática (confirmar variedad)';
@@ -369,8 +408,8 @@ PRODUCTS.forEach(product => {
   {n:'Plato', p:'$500', image:'Plato-3- $500.jpeg'},
   {n:'Plato', p:'$800', image:'Plato-4 , $800.jpeg'},
   {n:'Plato', p:'$1.000', image:'Plato-5- $1000.jpeg'},
-  {n:'Plato', p:'$1.500', image:'Plato-6- $1500.jpeg'},
-  {n:'Ganchos', p:'$1.000', image:'Ganchos 3x1000.jpeg'}
+  {n:'Plato', p:'Desde $1.800', image:'Plato-6- $1500.jpeg'},
+  {n:'Ganchos', p:'$ 1x 400 y 3x 1.000', image:'Ganchos 3x1000.jpeg'}
 ].forEach(item => {
   PRODUCTS.push({
     n:item.n, c:'maceteros', p:item.p,
@@ -391,8 +430,100 @@ Object.entries(missingPlantCategoryUpdates).forEach(([name, category])=>{
   if(product) product.c = category;
 });
 
+const tierraDeHojas = findProductByName('Tierra de Hojas + Compost + Perlita');
+if(tierraDeHojas){
+  tierraDeHojas.p = 'Desde $1.200';
+  tierraDeHojas.img = 'img/sustratos/7. Sustrato tierra de hojas ,compot y perlitas desde 1.200.jpeg';
+  tierraDeHojas.care = 'Mezcla de tierra de hojas, compost y perlita. Contenido: 2,5 kilos y medio.';
+}
+
 const ficusLyrata = findProductByName('Ficus lyrata');
 if(ficusLyrata) ficusLyrata.img = suppliedPhotoPath('WhatsApp Image 2026-08-03 at 14.54.57 (1).jpeg');
+
+const RECOVERED_PLANT_IMAGES = Object.freeze({
+  '75cb49b7-7901-41df-ad5d-20a40c879d81.jpg': 'img/plantas/Yuca Pata De Elefante 22.000.jpg',
+  'ala-de-angel-nueva.jpg': 'img/plantas/ala-de-angel-Desde 4.000.jpg',
+  'WhatsApp Image 2026-08-03 at 14.49.47.jpeg': 'img/plantas/WhatsApp Image 2026-08-03 at 14.49.47.jpeg',
+  'WhatsApp Image 2026-08-03 at 14.56.08 (2).jpeg': 'img/plantas/WhatsApp Image 2026-08-03 at 14.56.08 (2).jpeg',
+  'ficus-mini-nuevo.jpeg': 'img/plantas/ficus-mini-nuevo.jpeg',
+  'WhatsApp Image 2026-08-03 at 14.49.46.jpeg': 'img/plantas/WhatsApp Image 2026-08-03 at 14.49.46.jpeg',
+  'WhatsApp Image 2026-08-03 at 14.56.10.jpeg': 'img/plantas/WhatsApp Image 2026-08-03 at 14.56.10.jpeg',
+  'WhatsApp Image 2026-08-03 at 14.56.16 (2).jpeg': 'img/plantas/WhatsApp Image 2026-08-03 at 14.56.16 (2).jpeg',
+  'WhatsApp Image 2026-08-03 at 14.54.57 (1).jpeg': 'img/plantas/WhatsApp Image 2026-08-03 at 14.54.57 (1).jpeg',
+  'Mioporo Desde $ 2.500.jpeg': 'img/plantas/Mioporo Desde $ 2.500.jpeg',
+  'WhatsApp Image 2026-08-03 at 14.58.17 (1).jpeg': 'img/plantas/WhatsApp Image 2026-08-03 at 14.58.17 (1).jpeg',
+  'WhatsApp Image 2026-08-03 at 14.58.24 (1).jpeg': 'img/plantas/Hiedra Inglesa Desde 6.000.jpeg',
+  'WhatsApp Image 2026-08-03 at 14.50.17 (4).jpeg': 'img/plantas/WhatsApp Image 2026-08-03 at 14.50.17 (4).jpeg',
+  'Romero Desde 3.000.jpeg': 'img/plantas/Romero Desde 3.000.jpeg',
+  'WhatsApp Image 2026-08-03 at 14.55.29 (2).jpeg': 'img/plantas/WhatsApp Image 2026-08-03 at 14.55.29 (2).jpeg',
+  'WhatsApp Image 2026-08-03 at 14.57.58 (1).jpeg': 'img/plantas/WhatsApp Image 2026-08-03 at 14.57.58 (1).jpeg',
+  'WhatsApp Image 2026-08-03 at 14.58.20 (5).jpeg': 'img/plantas/WhatsApp Image 2026-08-03 at 14.58.20 (5).jpeg',
+  'WhatsApp Image 2026-08-03 at 14.44.21.jpeg': 'img/plantas/WhatsApp Image 2026-08-03 at 14.44.21.jpeg',
+  'WhatsApp Image 2026-08-03 at 14.55.15 (1).jpeg': 'img/plantas/Yuca Desde 6.000.jpeg',
+  'Monstera Variagada Desde $20.000.jpeg': 'img/plantas/Monstera Variagada Desde $20.000.jpeg',
+  'Gomero pera (Lirata) Desde $ 10.000.jpeg': 'img/plantas/Gomero pera (Lirata) Desde $ 10.000.jpeg',
+  'Dolar Desde $ 3.000.jpeg': 'img/plantas/Dolar Desde $ 3.000.jpeg',
+  'WhatsApp Image 2026-08-24 at 20.01.21 (1).jpeg': 'img/plantas/WhatsApp Image 2026-08-24 at 20.01.21 (1).jpeg',
+  'Chlorophytum comosum desde $ 4.000.jpeg': 'img/plantas/Chlorophytum comosum desde $ 4.000.jpeg',
+  'WhatsApp Image 2026-08-03 at 14.43.52 (2).jpeg': 'img/plantas/Helecho Nido De Ave.jpeg',
+  'WhatsApp Image 2026-08-03 at 14.44.19 (3).jpeg': 'img/plantas/WhatsApp Image 2026-08-03 at 14.44.19 (3).jpeg'
+});
+
+function useRecoveredPlantImage(imagePath){
+  if(typeof imagePath !== 'string') return imagePath;
+  const fileName = imagePath.slice(imagePath.lastIndexOf('/') + 1);
+  return RECOVERED_PLANT_IMAGES[fileName] || imagePath;
+}
+
+PRODUCTS.forEach(product => {
+  product.img = useRecoveredPlantImage(product.img);
+});
+
+const helechoPeineta = findProductByName('helecho espada');
+if(helechoPeineta){
+  helechoPeineta.n = 'Helecho peineta';
+  helechoPeineta.p = 'Desde $6.000';
+  helechoPeineta.img = 'img/plantas/Helecho Peineta Desde 6.000.jpeg';
+}
+
+const ficusRuby = findProductByName('Ficus Elastica (Gomero) ficus ruby');
+if(ficusRuby) ficusRuby.p = 'Desde $10.000';
+
+const repolloOrnamental = findProductByName('Repollo ornamenta');
+if(repolloOrnamental) repolloOrnamental.p = '$1.000';
+
+const pinoLimon = findProductByName('Pino limón');
+if(pinoLimon) pinoLimon.p = '$12.000';
+
+const ficusAli = findProductByName('Ficus maclellandii');
+if(ficusAli) ficusAli.n = 'Ficus Ali';
+
+const mantoDeEva = findProductByName('Manto de Eva');
+if(mantoDeEva) mantoDeEva.p = '$15.000';
+
+const gazania = findProductByName('Gazania');
+if(gazania) gazania.p = '$1.000';
+
+const dolarVariegado = findProductByName('Dolar variegado');
+if(dolarVariegado) dolarVariegado.p = '$3.000';
+
+const filodendroPink = findProductByName('Philodendron erubescens');
+if(filodendroPink){
+  filodendroPink.n = 'Filodendro pink';
+  filodendroPink.p = 'Desde $21.000';
+  filodendroPink.img = suppliedPhotoPath('Filodendro pink desde 21.000.jpeg');
+}
+
+[
+  {n:'Monstera Adansonii', c:'interior', p:'Desde $10.000', img:'img/plantas/Monstera Adansonii desde 10.000.jpeg'},
+  {n:'Yuca Grande', c:'exterior', p:'$39.000', img:'img/plantas/Yuca Grande 39.000.jpeg'},
+  {n:'Ficus Repen', c:'interior', p:'Desde $4.500', img:'img/plantas/Ficus Repen desde 4.500.jpeg'},
+  {n:'Filodendro Rojo Congo', c:'interior', p:'Desde $21.000', img:'img/plantas/Filodendro Rojo Congo desde 21.000.jpeg'}
+].forEach(update => {
+  const product = PRODUCTS.find(item => normalizeProductName(item.n) === normalizeProductName(update.n));
+  if(product) Object.assign(product, update);
+  else PRODUCTS.push({...update, care:'Consulta disponibilidad y cuidados por WhatsApp.'});
+});
 
 const CATS = {
   "interior": "🌿 Interior",
@@ -424,6 +555,123 @@ const countLabel = document.getElementById("countLabel");
 const categoryChipsEl = document.getElementById("categoryChips");
 const catalogToggle = document.getElementById("catalogToggle");
 let activeCategoryBubble = "featured";
+let activeCatalogOverlayHistory = null;
+
+function pushCatalogOverlayHistory(overlayType){
+  if(activeCatalogOverlayHistory) return;
+  const currentState = history.state && typeof history.state === 'object' ? history.state : {};
+  history.pushState({...currentState, catalogOverlay:overlayType}, '', window.location.href);
+  activeCatalogOverlayHistory = overlayType;
+}
+
+function releaseCatalogOverlayHistory(fromPopState = false){
+  const overlayType = activeCatalogOverlayHistory;
+  if(!overlayType) return;
+  activeCatalogOverlayHistory = null;
+  if(!fromPopState && history.state?.catalogOverlay === overlayType) history.back();
+}
+
+const PURCHASE_INFO_STORIES = [
+  {src:'img/informacion/1.jpeg', alt:'Bienvenida a Plantas Odette.'},
+  {src:'img/informacion/2..jpeg', alt:'Información sobre tamaños y valores.'},
+  {src:'img/informacion/3.jpeg', alt:'Información sobre formas de pago.'},
+  {src:'img/informacion/4.jpeg', alt:'Información sobre el monto mínimo de compra.'},
+  {src:'img/informacion/5.jpeg', alt:'Ayuda para encontrar una planta o recibir recomendaciones.'},
+  {src:'img/informacion/6.jpeg', alt:'Información sobre despachos y entregas.'},
+  {src:'img/informacion/7..jpeg', alt:'Cierre de la información de compras y envíos.'}
+];
+const PURCHASE_INFO_STORY_DURATION = 9000;
+const purchaseInfoDialog = document.getElementById('purchaseInfoDialog');
+let purchaseInfoStoryIndex = 0;
+let purchaseInfoStoryTimer = 0;
+let purchaseInfoStoryStartedAt = 0;
+let purchaseInfoStoryRemaining = PURCHASE_INFO_STORY_DURATION;
+let purchaseInfoStoryPaused = false;
+let purchaseInfoPreviousFocus = null;
+let purchaseInfoPreviousOverflow = '';
+
+function showPurchaseInfoStory(index){
+  if(index >= PURCHASE_INFO_STORIES.length){
+    closePurchaseInfoStories();
+    return;
+  }
+  purchaseInfoStoryIndex = Math.max(0, index);
+  purchaseInfoStoryRemaining = PURCHASE_INFO_STORY_DURATION;
+  purchaseInfoStoryPaused = false;
+  window.clearTimeout(purchaseInfoStoryTimer);
+
+  const story = PURCHASE_INFO_STORIES[purchaseInfoStoryIndex];
+  const image = document.getElementById('infoStoriesImage');
+  const progress = document.getElementById('infoStoriesProgress');
+  const pauseButton = document.getElementById('infoStoriesPause');
+  image.src = story.src;
+  image.alt = story.alt;
+  document.getElementById('infoStoriesStatus').textContent = `Historia ${purchaseInfoStoryIndex + 1} de ${PURCHASE_INFO_STORIES.length}`;
+  pauseButton.textContent = 'Ⅱ';
+  pauseButton.setAttribute('aria-label', 'Pausar historias');
+  progress.innerHTML = PURCHASE_INFO_STORIES.map((_, storyIndex) => {
+    const state = storyIndex < purchaseInfoStoryIndex ? 'is-complete' : storyIndex === purchaseInfoStoryIndex ? 'is-current' : '';
+    return `<span class="info-stories-progress-track"><span class="info-stories-progress-fill ${state}"></span></span>`;
+  }).join('');
+
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches) startPurchaseInfoStoryTimer();
+}
+
+function startPurchaseInfoStoryTimer(){
+  const fill = document.querySelector('.info-stories-progress-fill.is-current');
+  if(!fill) return;
+  fill.style.setProperty('--info-story-duration', `${purchaseInfoStoryRemaining}ms`);
+  fill.classList.add('is-running');
+  fill.style.animationPlayState = 'running';
+  purchaseInfoStoryStartedAt = Date.now();
+  window.clearTimeout(purchaseInfoStoryTimer);
+  purchaseInfoStoryTimer = window.setTimeout(()=>showPurchaseInfoStory(purchaseInfoStoryIndex + 1), purchaseInfoStoryRemaining);
+}
+
+function openPurchaseInfoStories(){
+  pushCatalogOverlayHistory('information');
+  purchaseInfoPreviousFocus = document.activeElement;
+  purchaseInfoPreviousOverflow = document.body.style.overflow;
+  purchaseInfoDialog.hidden = false;
+  purchaseInfoDialog.setAttribute('aria-hidden', 'false');
+  purchaseInfoDialog.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  showPurchaseInfoStory(0);
+  document.getElementById('infoStoriesClose').focus();
+}
+
+function closePurchaseInfoStories(fromPopState = false){
+  window.clearTimeout(purchaseInfoStoryTimer);
+  purchaseInfoDialog.classList.remove('open');
+  purchaseInfoDialog.setAttribute('aria-hidden', 'true');
+  purchaseInfoDialog.hidden = true;
+  document.body.style.overflow = purchaseInfoPreviousOverflow;
+  if(purchaseInfoPreviousFocus && typeof purchaseInfoPreviousFocus.focus === 'function') purchaseInfoPreviousFocus.focus();
+  releaseCatalogOverlayHistory(fromPopState);
+}
+
+function movePurchaseInfoStory(direction){
+  showPurchaseInfoStory(purchaseInfoStoryIndex + direction);
+}
+
+function togglePurchaseInfoStoryPause(){
+  const button = document.getElementById('infoStoriesPause');
+  const fill = document.querySelector('.info-stories-progress-fill.is-current');
+  if(!fill) return;
+  if(purchaseInfoStoryPaused){
+    purchaseInfoStoryPaused = false;
+    button.textContent = 'Ⅱ';
+    button.setAttribute('aria-label', 'Pausar historias');
+    startPurchaseInfoStoryTimer();
+    return;
+  }
+  purchaseInfoStoryPaused = true;
+  purchaseInfoStoryRemaining = Math.max(0, purchaseInfoStoryRemaining - (Date.now() - purchaseInfoStoryStartedAt));
+  window.clearTimeout(purchaseInfoStoryTimer);
+  fill.style.animationPlayState = 'paused';
+  button.textContent = '▶';
+  button.setAttribute('aria-label', 'Reanudar historias');
+}
 
 const CATEGORY_BUBBLE_IMAGES = {
   featured: "img/productos/75cb49b7-7901-41df-ad5d-20a40c879d81.jpg",
@@ -434,6 +682,9 @@ const CATEGORY_BUBBLE_IMAGES = {
   huerto: "img/productos/WhatsApp Image 2026-08-03 at 14.57.58 (1).jpeg",
   maceteros: "img/maceteros/Macetero-Colgante-$1300.jpeg"
 };
+Object.keys(CATEGORY_BUBBLE_IMAGES).forEach(category => {
+  CATEGORY_BUBBLE_IMAGES[category] = useRecoveredPlantImage(CATEGORY_BUBBLE_IMAGES[category]);
+});
 
 function buildCategoryBubbles(){
   if(!categoryChipsEl) return;
@@ -448,7 +699,7 @@ function buildCategoryBubbles(){
     const isActive = category === activeCategoryBubble;
     return `<button class="chip ${isActive ? 'active' : ''}" type="button" data-cat="${category}" aria-pressed="${isActive}"><img src="${image}" alt="" draggable="false" loading="eager" decoding="async"><span class="chip-label">${label.replace(/^[^\p{L}\p{N}]*/u, "").trim()}</span></button>`;
   });
-  const informationBubble = '<button class="chip info-story-category-bubble" id="openPurchaseInfoCategory" type="button" aria-label="Abrir información" aria-haspopup="dialog" aria-controls="purchaseInfoDialog"><img class="info-story-category-icon" src="img/informacion/bienvenida-compras-envios.jpeg" alt="" draggable="false" loading="eager" decoding="async"><span class="chip-label">Información</span></button>';
+  const informationBubble = '<button class="chip info-story-category-bubble" id="openPurchaseInfoCategory" type="button" aria-label="Abrir información" aria-haspopup="dialog" aria-controls="purchaseInfoDialog"><img class="info-story-category-icon" src="img/informacion/7..jpeg" alt="" draggable="false" loading="eager" decoding="async"><span class="chip-label">Información</span></button>';
   categoryChipsEl.innerHTML = `${categoryBubbles[0]}${informationBubble}${categoryBubbles.slice(1).join("")}`;
   categoryChipsEl.querySelectorAll(".chip:not(.info-story-category-bubble)").forEach(chip=>{
     chip.addEventListener("click", ()=>{
@@ -460,7 +711,7 @@ function buildCategoryBubbles(){
       render();
     });
   });
-  categoryChipsEl.querySelector("#openPurchaseInfoCategory")?.addEventListener("click", ()=>document.getElementById("openPurchaseInfo")?.click());
+  categoryChipsEl.querySelector("#openPurchaseInfoCategory")?.addEventListener("click", openPurchaseInfoStories);
   const activeChip = categoryChipsEl.querySelector(".chip.active");
   if(activeChip) activeChip.scrollIntoView({behavior:"smooth", inline:"center", block:"nearest"});
 }
@@ -628,12 +879,16 @@ function productImageSrc(image){
 }
 
 function render(){
-  const q = query.trim().toLowerCase();
+  const q = normalizeProductName(query.trim());
   const filtered = PRODUCTS.filter(p=>{
     const matchCat = activeCat === "all" || p.c === activeCat;
-    const matchQ = !q || p.n.toLowerCase().includes(q);
+    const matchQ = !q || normalizeProductName(p.n).includes(q);
     return matchCat && matchQ;
   });
+  if(activeCat === 'interior'){
+    const monsteraIndex = filtered.findIndex(product => product.n === 'Monstera deliciosa');
+    if(monsteraIndex > 0) filtered.unshift(filtered.splice(monsteraIndex, 1)[0]);
+  }
   const visible = !showAllProducts && activeCat === 'all' && !q ? filtered.slice(0, 8) : filtered;
   countLabel.textContent = showAllProducts || q || activeCat !== 'all'
     ? `${filtered.length} producto${filtered.length!==1?'s':''}`
@@ -649,7 +904,7 @@ function render(){
     const realIdx = PRODUCTS.indexOf(p);
     const img = productImageSrc(p.img);
     const isGuano = p.n === 'Guano Rojo Reforzado N-P-K';
-    const imageClass = p.n === 'Sustrato Premium' ? 'thumb premium-substrate-photo' : 'thumb';
+    const imageClass = p.n === 'Sustrato Premium' ? 'thumb premium-substrate-photo' : p.n === 'Tierra de Hojas + Compost + Perlita' ? 'thumb soil-mix-photo' : 'thumb';
     const isPlant = ['interior', 'exterior', 'suculentas', 'frutales', 'huerto'].includes(p.c);
     const currentPrice = String(p.p || '').trim();
     const cardPrice = isPlant && currentPrice && !/^sin precio$/i.test(currentPrice)
@@ -676,6 +931,7 @@ let currentProductIndex = null;
 function openModal(idx){
   const p = PRODUCTS[idx];
   if(!p) return;
+  pushCatalogOverlayHistory('product');
   lastFocusedElement = document.activeElement;
   currentProductIndex = idx;
   const modalImg = document.getElementById("modalImg");
@@ -683,6 +939,7 @@ function openModal(idx){
   modalImg.alt = p.n;
   modalImg.parentElement.classList.toggle('guano-photo-frame', p.n === 'Guano Rojo Reforzado N-P-K');
   modalImg.parentElement.classList.toggle('premium-substrate-photo-frame', p.n === 'Sustrato Premium');
+  modalImg.parentElement.classList.toggle('soil-mix-photo-frame', p.n === 'Tierra de Hojas + Compost + Perlita');
   document.getElementById("modalCat").textContent = CATS[p.c]||'';
   document.getElementById("modalName").textContent = p.n;
   const careTitle = document.querySelector('.care-title');
@@ -741,20 +998,52 @@ function openModal(idx){
   document.getElementById("overlay").setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
 }
-function closeModal(){
+function closeModal(fromPopState = false){
   document.getElementById("overlay").classList.remove("open");
   document.getElementById("overlay").setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
   if(lastFocusedElement && typeof lastFocusedElement.focus === "function") lastFocusedElement.focus();
+  releaseCatalogOverlayHistory(fromPopState);
 }
 document.getElementById("overlay").addEventListener("click", (e)=>{
   if(e.target.id === "overlay") closeModal();
 });
+window.addEventListener("popstate", ()=>{
+  const overlayType = activeCatalogOverlayHistory;
+  if(!overlayType) return;
+  activeCatalogOverlayHistory = null;
+  if(overlayType === 'product' && document.getElementById("overlay").classList.contains("open")) closeModal(true);
+  if(overlayType === 'information' && !purchaseInfoDialog.hidden) closePurchaseInfoStories(true);
+});
 document.addEventListener("keydown", (e)=>{
+  if(!purchaseInfoDialog.hidden){
+    if(e.key === "Escape"){
+      closePurchaseInfoStories();
+      return;
+    }
+    if(e.key === "ArrowRight"){
+      e.preventDefault();
+      movePurchaseInfoStory(1);
+      return;
+    }
+    if(e.key === "ArrowLeft"){
+      e.preventDefault();
+      movePurchaseInfoStory(-1);
+      return;
+    }
+  }
   if(e.key === "Escape"){
     if(document.getElementById("overlay").classList.contains("open")) closeModal();
     else if(document.getElementById("cartDrawer").classList.contains("open")) toggleCart();
   }
+});
+
+document.getElementById('infoStoriesClose').addEventListener('click', closePurchaseInfoStories);
+document.getElementById('infoStoriesPrev').addEventListener('click', ()=>movePurchaseInfoStory(-1));
+document.getElementById('infoStoriesNext').addEventListener('click', ()=>movePurchaseInfoStory(1));
+document.getElementById('infoStoriesPause').addEventListener('click', togglePurchaseInfoStoryPause);
+purchaseInfoDialog.addEventListener('click', event=>{
+  if(event.target === purchaseInfoDialog) closePurchaseInfoStories();
 });
 
 document.getElementById("search").addEventListener("input", (e)=>{

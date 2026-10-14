@@ -7,7 +7,7 @@ Catálogo web estático de plantas, sustratos, abonos, amigurumis y arreglos de 
 - `index.html`: estructura semántica y contenido visual.
 - `css/style.css`: estilos personalizados y responsive.
 - `js/catalogo.js`: productos, filtros, modal, carrito, WhatsApp y galerías.
-- `img/productos/`: imágenes locales copiadas desde el prototipo existente.
+- `img/plantas/`: imágenes locales de plantas usadas en las fichas del catálogo.
 - `img/amigurumis/` y `img/otros/`: reservadas para futuras imágenes locales.
 
 ## Uso
@@ -35,6 +35,11 @@ La información del catálogo se conserva en `js/catalogo.js`: no se eliminaron 
 - Rendimiento: se mantienen las imágenes originales y sus referencias para evitar pérdida de calidad. Las galerías usan carga diferida; la conversión futura a WebP/AVIF debe hacerse con comparación visual y respaldo de los originales.
 - Recomendaciones: elegir una única versión publicada, extraer gradualmente las imágenes Base64 a archivos optimizados, centralizar el catálogo en un archivo de datos validado y sustituir dependencias externas solo después de disponer de copias locales equivalentes.
 
+### Informes detallados
+
+- [Inventario del catálogo](informes/INVENTARIO-CATALOGO.md)
+- [Auditoría botánica](informes/INFORME-AUDITORIA-BOTANICA.md)
+
 ## Imágenes
 
-Las imágenes locales del prototipo se conservaron y se copiaron a `img/productos/`. Las imágenes Base64 que siguen dentro de `js/catalogo.js` corresponden al catálogo original, la galería de amigurumis y códigos QR; conviene convertirlas a archivos `.webp` en una etapa posterior con revisión visual y actualización de referencias, porque retirarlas sin comprobar cada uso podría alterar el contenido existente.
+Las imágenes locales de plantas se organizan en `img/plantas/`. Las imágenes Base64 que siguen dentro de `js/catalogo.js` corresponden al catálogo original, la galería de amigurumis y códigos QR; conviene convertirlas a archivos `.webp` en una etapa posterior con revisión visual y actualización de referencias, porque retirarlas sin comprobar cada uso podría alterar el contenido existente.
